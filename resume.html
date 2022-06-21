@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Resume </title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>
-function onDocLoad() {
-      var fdata = JSON.parse(window.localStorage.getItem("formDate"));
-    for (var key in fdata) {
-try{
-    document.getElementById(key).innerHTML = fdata[key];
-}
-catch(e){
-    console.log("errorwithfields "+key);
-}
-}
-    
-}
 
-        </script>
-        <style>
-            .skil-item {
-                margin: 5px;
-                /*padding: 3px;*/
-                background-color: #c5d4ed4a;
-                border-radius: 6px;
+<head>
+    <title> Resume </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function onDocLoad() {
+            var fdata = JSON.parse(window.localStorage.getItem("formDate"));
+            for (var key in fdata) {
+                try {
+                    document.getElementById(key).innerHTML = fdata[key];
+                }
+                catch (e) {
+                    console.log("errorwithfields " + key);
+                }
             }
-            .container {
-                border: 1px solid rgba(128, 128, 128, 0.288);
-                border-radius: 10px;
-                background-color:rgb(250, 248, 245);
-            }
-            .card-header, .card, .card-body, .card-footer {
-                border: none;
-            }
-            .hobbies{
-                /*border: 1px solid rgb(143, 212, 143);*/
-                padding:4px;
-            }
-            .recognition{
-                margin-top:10px;
-            }
-            .card-header img{
-                border-radius: 50%;
-            }
-            ul {
-                list-style-type: none;
-            }
-            p{
-                margin-top:18px;
-            }
-        </style>
-    </head>
-    <body onload="onDocLoad()">
-        <div class="container mt-3">
-        <div class="row" >
-            
+
+        }
+
+    </script>
+    <style>
+        .skil-item {
+            margin: 5px;
+            /*padding: 3px;*/
+            background-color: #c5d4ed4a;
+            border-radius: 6px;
+        }
+
+        .container {
+            border: 1px solid rgba(128, 128, 128, 0.288);
+            border-radius: 10px;
+            background-color: rgb(250, 248, 245);
+        }
+
+        .card-header,
+        .card,
+        .card-body,
+        .card-footer {
+            border: none;
+        }
+
+        .hobbies {
+            /*border: 1px solid rgb(143, 212, 143);*/
+            padding: 4px;
+        }
+
+        .recognition {
+            margin-top: 10px;
+        }
+
+        .card-header img {
+            border-radius: 50%;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        p {
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body onload="onDocLoad()">
+    <div class="container mt-3">
+        <div class="row">
+
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-header">
@@ -76,91 +88,44 @@ catch(e){
                     </div>
                 </div>
                 <div class="card">
-                    
+
                     <div class="card-body m-3">
-                    <h5>Skils:</h5>
+                        <h5>Skils:</h5>
                         <span class="skil-item" id="tech1"></span><span class="skil-item" id="tech2"></span><br>
                         <span class="skil-item" class="mt-3" id="tech3"></span>
                     </div>
                 </div>
-                
+
                 <div class="recognition bg-light m-3">
                     <h5>Awards:</h5>
-                        <span id="Awards"></span>
+                    <span id="Awards"></span>
                 </div>
                 <div class="hobbies bg-light m-3">
-                    <h5 >Hobbies:</h5>
-                    <span id="hobbies" ></span>
+                    <h5>Hobbies:</h5>
+                    <span id="hobbies"></span>
                 </div>
-                <!-- <div class="additional skills m-3">
-                    <h5>Additional Skills:</h5>
-                    <ul>
-                        <li id="addskills1"></li>
-                        <li id="addskills2"></li>
-                        <li id="addskills3"></li>
-                    </ul>
-                     </div> -->
+
 
             </div>
-            <div class="col-md-9" >
+            <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-6">
-                        <p><i class="fa fa-phone">  8788987988</i></p>
+                        <p><i class="fa fa-phone"> 8788987988</i></p>
                         <p><i class="fa fa-envelope"> hari@gmail.com</i></p>
                     </div>
                     <div class="col-md-6">
-                        <p><i class="fa fa-phone">  https://linkedin.com</i></p>
-                        <p><i class="fa fa-envelope">  https://github.com</i></p>
+                        <p><i class="fa fa-phone"> https://linkedin.com</i></p>
+                        <p><i class="fa fa-envelope"> https://github.com</i></p>
                     </div>
                 </div>
                 <hr>
-            
-                    <!-- <h4 style="color: black;">Career Objective</h4> -->
-                    <!-- <textarea name="objective"
-                      id="objective"
-                      
-                      
-                    ></textarea> -->
-                    <h4>Career Objective</h4>
-            <div class="jumbotron">
-              <p id="objective"></p>
-            </div>
-               
-                <!-- <div class="row">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th >
-                                    Academics
-                                </th>
-                                <th>
-                                    University
-                                </th>
-                                <th>
-                                    Percentage
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                            </tr>
-                            <tr>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                            </tr>
-                            <tr>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                                <td>aasdasddsad </td>
-                            </tr>
-                        </tbody>
 
-                    </table>
-                </div> -->
+                <h4>Career Objective</h4>
+                <div class="jumbotron">
+                    <p id="objective"></p>
+                </div>
+
+
                 <h4 style="color: black;">Qualification:</h4>
                 <div class="jumbotron">
                     <div class="row visible-md visible-lg">
@@ -174,186 +139,165 @@ catch(e){
                             <label>Year of Passing</label>
                         </div>
                         <div class="form-group col-md-3">
-                          <label>Percentage/CGPA</label>
-                      </div>
-                        
+                            <label>Percentage/CGPA</label>
+                        </div>
+
                     </div>
                     <div class="row">
                         <div class="form-group col-md-3">
                             <!-- <label class="visible-xs visible-sm">First Name</label>
                             Jake -->
                             <label>Graduation: </label>
-                            
-                            
+
+
                         </div>
                         <div class="form-group col-md-3">
-                            <div  id="university1"></div>
+                            <div id="university1"></div>
                         </div>
                         <div class="form-group col-md-3">
                             <!-- <label class="visible-xs visible-sm">Address</label>
                             1060 W Addison St -->
-                            <div  id="yearofpassing1"></div>
+                            <div id="yearofpassing1"></div>
                         </div>
                         <div class="form-group col-md-3">
-                          <!-- <label class="visible-xs visible-sm">Address</label>
+                            <!-- <label class="visible-xs visible-sm">Address</label>
                           1060 W Addison St -->
-                          <div  id="percentage1"></div>
-                      </div>
-                        
+                            <div id="percentage1"></div>
+                        </div>
+
                     </div>
-                    <!-- <div class="row">
-                      <div class="form-group col-md-3">
-                           <label class="visible-xs visible-sm">First Name</label>
-                          Jake 
-                          <label> Diploma: </label>
-                          
-                          
-                      </div>
-                      <div class="form-group col-md-3">
-                        <div  id="university2"></div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label class="visible-xs visible-sm">Address</label>
-                        1060 W Addison St
-                        <div  id="yearofpassing2"></div>
-                    </div>
-                    <div class="form-group col-md-3">
-                       <label class="visible-xs visible-sm">Address</label>
-                      1060 W Addison St 
-                      <div  id="percentage2"></div>
-                  </div>
-                      
-                  </div> -->
-                  <div class="row">
-                    <div class="form-group col-md-3">
-                        <!-- <label class="visible-xs visible-sm">First Name</label>
+
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">First Name</label>
                         Jake -->
-                        <label> Intermidiate: </label>
-                        
-                        
-                    </div>
-                    <div class="form-group col-md-3">
-                        <div  id="university3"></div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <!-- <label class="visible-xs visible-sm">Address</label>
+                            <label> Intermidiate: </label>
+
+
+                        </div>
+                        <div class="form-group col-md-3">
+                            <div id="university3"></div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
                         1060 W Addison St -->
-                        <div  id="yearofpassing3"></div>
-                    </div>
-                    <div class="form-group col-md-3">
-                      <!-- <label class="visible-xs visible-sm">Address</label>
+                            <div id="yearofpassing3"></div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
                       1060 W Addison St -->
-                      <div  id="percentage3"></div>
-                  </div>
-                    
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-3">
-                      <!-- <label class="visible-xs visible-sm">First Name</label>
+                            <div id="percentage3"></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">First Name</label>
                       Jake -->
-                      <label>High School: </label>
-                      
-                      
-                  </div>
-                  <div class="form-group col-md-3">
-                    <div  id="university4"></div>
-                </div>
-                <div class="form-group col-md-3">
-                    <!-- <label class="visible-xs visible-sm">Address</label>
+                            <label>High School: </label>
+
+
+                        </div>
+                        <div class="form-group col-md-3">
+                            <div id="university4"></div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
                     1060 W Addison St -->
-                    <div  id="yearofpassing4"></div>
-                </div>
-                <div class="form-group col-md-3">
-                  <!-- <label class="visible-xs visible-sm">Address</label>
+                            <div id="yearofpassing4"></div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
                   1060 W Addison St -->
-                  <div  id="percentage4"></div>
-              </div>
-                  
-              </div>
-                    </div>
-                    <h4 style="color: black;">Experience:</h4>
-                    <div class="jumbotron">
-                        
-                        <div class="row visible-md visible-lg">
-                            <div class="form-group col-md-4">
-                                <label>Organization</label>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label>Joining Date</label>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label>Releaving Date</label>
-                            </div>
-                            
+                            <div id="percentage4"></div>
                         </div>
-                        
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">First Name</label>
-                                Jake -->
-                                <div  id="organization1"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Last Name</label>
-                                Elwood -->
-                                <div  id="doj1"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Address</label>
-                                1060 W Addison St -->
-                                <div  id="dor1"></div>
-                            </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">First Name</label>
-                                Jake -->
-                                <div  id="organization2"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Last Name</label>
-                                Elwood -->
-                                <div  id="doj2"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Address</label>
-                                1060 W Addison St -->
-                                <div  id="dor2"></div>
-                            </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">First Name</label>
-                                Jake -->
-                                <div  id="organization3"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Last Name</label>
-                                Elwood -->
-                                <div  id="doj3"></div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <!-- <label class="visible-xs visible-sm">Address</label>
-                                1060 W Addison St -->
-                                <div  id="dor3"></div>
-                            </div>
-                          
-                      </div>
+
                     </div>
-                    <h4 style="color: black;">Describe Yourself:</h4>
-                    <div class="jumbotron">
-                      <p id="describe"></p>
-                      </div>
-                    <h4 style="color: black;">Declaration:</h4>
-                    <div class="jumbotron">
-                      <p id="declare"></p>
+                </div>
+                <h4 style="color: black;">Experience:</h4>
+                <div class="jumbotron">
+
+                    <div class="row visible-md visible-lg">
+                        <div class="form-group col-md-4">
+                            <label>Organization</label>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Joining Date</label>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Releaving Date</label>
+                        </div>
+
                     </div>
-             
-                
+
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">First Name</label>
+                                Jake -->
+                            <div id="organization1"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Last Name</label>
+                                Elwood -->
+                            <div id="doj1"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
+                                1060 W Addison St -->
+                            <div id="dor1"></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">First Name</label>
+                                Jake -->
+                            <div id="organization2"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Last Name</label>
+                                Elwood -->
+                            <div id="doj2"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
+                                1060 W Addison St -->
+                            <div id="dor2"></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">First Name</label>
+                                Jake -->
+                            <div id="organization3"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Last Name</label>
+                                Elwood -->
+                            <div id="doj3"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- <label class="visible-xs visible-sm">Address</label>
+                                1060 W Addison St -->
+                            <div id="dor3"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <h4 style="color: black;">Describe Yourself:</h4>
+                <div class="jumbotron">
+                    <p id="describe"></p>
+                </div>
+                <h4 style="color: black;">Declaration:</h4>
+                <div class="jumbotron">
+                    <p id="declare"></p>
+                </div>
+
+
             </div>
         </div>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
